@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="6244" systemVersion="13F34" minimumToolsVersion="Automatic" macOSVersion="Automatic" iOSVersion="Automatic">
+    <entity name="Person" representedClassName="Person" syncable="YES">
+        <attribute name="personContact" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="personEmail" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="personName" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="personTracks" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Tracks" inverseName="trackPeople" inverseEntity="Tracks" syncable="YES"/>
+    </entity>
+    <entity name="Tracks" representedClassName="Tracks" syncable="YES">
+        <attribute name="trackHeartrate" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <attribute name="trackName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="trackRecorded" optional="YES" attributeType="Boolean" syncable="YES"/>
+        <relationship name="trackPeople" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Person" inverseName="personTracks" inverseEntity="Person" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="Person" positionX="-63" positionY="-18" width="128" height="103"/>
+        <element name="Tracks" positionX="-63" positionY="9" width="128" height="103"/>
+    </elements>
+</model>
