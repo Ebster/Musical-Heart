@@ -112,7 +112,7 @@
     
     // Clear out textView
     [self.deviceInfo setText:@""];
-    [self.deviceInfo setTextColor:[UIColor blueColor]];
+    //[self.deviceInfo setTextColor:[UIColor blueColor]];
    
     [self.deviceInfo setFont:[UIFont fontWithName:@"Futura-CondensedMedium" size:25]];
     [self.deviceInfo setUserInteractionEnabled:NO];
